@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useUser, User } from "@/hooks/useUser";
-import FriendRequestButton from "@/components/FriendRequests/SendFriendRequestButton";
+import FriendRequestButton from "@/components/FriendRequests/FriendRequestButton";
 import UsersList from '../Friends/UsersList';
 import RemoveFriendButton from '../Friends/RemoveFriendButton';
 // import { User } from "/@hooks/useAllUsers";
@@ -62,14 +62,7 @@ export default function FriendRequestDropdown({ currentUser, users, selectedUser
                 if (onFriendRemoved) onFriendRemoved(selectedUser.username);
               }}
             />
-          ) : (
-            <FriendRequestButton
-              senderId={currentUser.userId}
-              receiverId={selectedUser.userId}
-              receiverUsername={selectedUser.username}
-              onSuccess={() => console.log(`Request sent to ${selectedUser.username}`)}
-            />
-          )}
+          ) : <></>}
         </div>
       )}
     </div>

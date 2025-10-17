@@ -2,9 +2,11 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 
-interface friendReqButtonProps{
+type friendReqButtonProps = {
     senderId: string; //sender
     receiverId: string; //receiver
+    receiverUsername?: string;
+    onSuccess?: () => void;
 }
 
 function FriendRequestButton( { senderId, receiverId }: friendReqButtonProps ) {

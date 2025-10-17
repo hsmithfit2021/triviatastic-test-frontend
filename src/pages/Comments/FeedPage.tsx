@@ -37,7 +37,7 @@ export default function FeedPage() {
   return (
     <div className="container mt-4">
       <h2 className="mb-3">Global Feed</h2>
-      <PostList posts={posts} onLike={handleLikeToggle} type="feed" />
+      <PostList posts={posts} onLike={handleLikeToggle} type="myPosts" />
     </div>
   );
 }
