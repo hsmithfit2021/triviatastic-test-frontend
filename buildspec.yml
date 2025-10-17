@@ -11,6 +11,8 @@ phases:
   build:
     commands:
       - npm run build
+      - pwd
+      - ls
 artifacts:
   base-directory: 'dist'
   files:
